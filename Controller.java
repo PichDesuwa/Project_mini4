@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -41,6 +43,27 @@ public class Controller {
 
     @FXML
     void onbutton(ActionEvent event) {
+        String name = name1.getText();
+        String birth = birth2.getValue().toString();
+        String department="";
+        if(D1.isSelected()) {
+            department = "GTR";
+        } else if(D2.isSelected()) {
+            department = "Gic";
+        } else if(D3.isSelected()) {
+            department = "GEE";
+        }
+        ArrayList<String> courses = new ArrayList<>();
+        if(c1.isSelected()) {
+            courses.add("OS");
+        }
+        if(c2.isSelected()) {
+            courses.add("OOP");
+        if(c3.isSelected()) {
+            courses.add("Network");
+        }
     }
-
 }
+}
+
+
