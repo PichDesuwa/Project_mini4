@@ -6,11 +6,11 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
    <children>
       <Label layoutX="227.0" layoutY="3.0" prefHeight="67.0" prefWidth="135.0" text="Mini Project 4&#10;Survey Student">
          <font>
@@ -24,9 +24,12 @@
       </Label>
       <CheckBox fx:id="c3" layoutX="64.0" layoutY="345.0" mnemonicParsing="false" text="Network" />
       <Button fx:id="button" layoutX="249.0" layoutY="350.0" mnemonicParsing="false" onAction="#onbutton" text="Button" />
-      <RadioButton fx:id="D3" layoutX="65.0" layoutY="234.0" mnemonicParsing="false" text="GEE" />
-      <RadioButton fx:id="D2" layoutX="65.0" layoutY="207.0" mnemonicParsing="false" text="GIC" />
-      <RadioButton fx:id="D1" layoutX="65.0" layoutY="181.0" mnemonicParsing="false" text="GTR" />
+      <RadioButton fx:id="D3" layoutX="65.0" layoutY="234.0" mnemonicParsing="false" text="GEE">
+         <toggleGroup>
+            <ToggleGroup fx:id="group_dpt" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="D2" layoutX="65.0" layoutY="207.0" mnemonicParsing="false" text="GIC" toggleGroup="$group_dpt" />
+      <RadioButton fx:id="D1" layoutX="65.0" layoutY="181.0" mnemonicParsing="false" text="GTR" toggleGroup="$group_dpt" />
       <CheckBox fx:id="c2" layoutX="64.0" layoutY="317.0" mnemonicParsing="false" text="OOP" />
       <CheckBox fx:id="c1" layoutX="64.0" layoutY="285.0" mnemonicParsing="false" text="OS" />
       <TextField fx:id="name1" layoutX="274.0" layoutY="74.0" />
