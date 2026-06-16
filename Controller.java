@@ -63,6 +63,7 @@ public class Controller {
             courses.add("Network");
         }
     }
+    result.setText("Name: " + name + "\nBirth: " + birth + "\nDepartment: " + department + "\nCourses: " + String.join(", ", courses));
 }
 }
 
