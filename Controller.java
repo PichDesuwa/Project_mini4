@@ -64,7 +64,14 @@ public class Controller {
         }
     }
     result.setText("Name: " + name + "\nBirth: " + birth + "\nDepartment: " + department + "\nCourses: " + String.join(", ", courses));
+    if(courses.size() == 0) {
+       result.setText(result.getText() + "   - None");
+    }
+    else {
+       result.setText(result.getText() + "   - " + String.join(", ", courses));
+    }
 }
+
 }
 
 
