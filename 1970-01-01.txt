@@ -1,0 +1,4 @@
+Name: adad
+Birth: 2026-06-10
+Department: GTR
+Courses: 

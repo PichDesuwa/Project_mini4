@@ -1,3 +1,6 @@
+import java.io.FileWriter;
+import java.sql.Date;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
 import javafx.event.ActionEvent;
@@ -8,6 +11,7 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
+import javafx.scene.input.DataFormat;
 
 public class Controller {
 
@@ -64,6 +68,19 @@ public class Controller {
         }
     }
     result.setText("Name: " + name + "\nBirth: " + birth + "\nDepartment: " + department + "\nCourses: " + String.join(", ", courses));
+
+    Date date = new Date(0);
+SimpleDateFormat format_date = new SimpleDateFormat("yyyy-MM-dd");
+String formatted_date = format_date.format(date);
+
+try{
+    FileWriter writer = new FileWriter(formatted_date + ".txt");
+    writer.write(result.getText());
+    writer.close();
+    result.setText(result.getText());
+} catch (Exception e) {
+    
+}
 }
 
 }
